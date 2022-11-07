@@ -100,14 +100,3 @@ def set_user_state(telegram_id, state):
     with contextlib.closing(sqlite3.connect('todo.db')) as con:
         with con as cur:
             cur.execute('UPDATE user SET state=(?) WHERE telegram_id=(?);', (state, telegram_id))
-
-
-# create_tables()
-# add_user('Nazar')
-# add_task('Test', 'Desc', None, 1)
-# mark_as_completed(1)
-# list_user_tasks('Nazar')
-# delete_user_task(1)
-# change_user_state('Nazar', 'something new')
-
-
