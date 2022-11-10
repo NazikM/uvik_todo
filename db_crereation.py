@@ -10,7 +10,6 @@ def create_tables():
             state text NOT NULL,
             draft_task_id INTEGER
             );''')
-            # data = cur.fetchone()
 
         with con as cur:
             cur.execute('''CREATE TABLE IF NOT EXISTS task(
